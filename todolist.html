@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+
+<head>
+	<meta charset="utf-8">
+	<title>TodoMVC</title>
+	<link rel="stylesheet" href="./todo.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/ec5a444b9a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<section class="todoapp">
+		<header class="header">
+			<h1>todos</h1>
+		</header>
+		<div class="main">
+			<div class="entry frame flex">
+				<input class="entry-text" type="text" placeholder="Hãy viết gì đó " autofocus/>
+				<i class="btn entry-add fas fa-plus"></i>
+			</div>
+			<hr />
+			<ul class="list ">
+				
+			</ul>
+
+
+		</div>
+		<footer class="footer flex">
+			<span class="todo-count"></span>
+			<div class="btn active filter_all filter frame flex" alt="All Items">
+				<i class="fas fa-clipboard-list"></i>
+			</div>
+			<div class="btn filter_checked filter frame flex" alt="Checked Items">
+				<i class="fas fa-clipboard-check"></i>
+			</div>
+			<div class="btn filter_starred filter frame flex" alt="Starred Items">
+				<i class="fas fa-star"></i>
+			</div>
+			<div class="btn filter_deleted filter frame flex" alt="Deletedl Items">
+				<i class="fas fa-trash-alt"></i>
+			</div>
+		</footer>
+	</section>
+	
+	<script src="./todo.js"></script>
+
+</body>
+
+</html>

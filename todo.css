@@ -1,0 +1,324 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #f5f5f5;
+	color: #4d4d4d;
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+
+	font-weight: 300;
+}
+
+:focus {
+	outline: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.todoapp {
+	background: #fff;
+	margin: 130px 0 40px 0;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+		0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.entry-text{
+	border: none;
+	padding-left: 30px;
+	font-size: 18px;
+}
+
+.todoapp input::input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+.todoapp h1 {
+	position: absolute;
+	top: -155px;
+	width: 100%;
+	font-size: 100px;
+	font-weight: 100;
+	text-align: center;
+	color: rgba(175, 47, 47, 0.15);
+
+}
+
+.new-todo,
+.edit {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	font-size: 24px;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1.4em;
+	border: 0;
+	color: inherit;
+	padding: 6px;
+	border: 1px solid #999;
+	box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+
+}
+
+.new-todo {
+	padding: 16px 16px 16px 60px;
+	border: none;
+	background: rgba(0, 0, 0, 0.003);
+	box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+}
+
+.main {
+	position: relative;
+	z-index: 2;
+	border-top: 1px solid #e6e6e6;
+}
+	
+
+
+.footer {
+	color: #777;
+	padding: 10px 15px;
+	text-align: center;
+	border-top: 1px solid #e6e6e6;
+	justify-content: space-between;
+}
+
+.footer {
+	content: '';
+	
+	overflow: hidden;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+		0 8px 0 -3px #f6f6f6,
+		0 9px 1px -3px rgba(0, 0, 0, 0.2),
+		0 16px 0 -6px #f6f6f6,
+		0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.todo-count {
+	float: left;
+	text-align: left;
+}
+
+.todo-count strong {
+	font-weight: 300;
+}
+
+.filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+.filters li {
+	display: inline;
+}
+
+.filters li a {
+	color: inherit;
+	margin: 3px;
+	padding: 3px 7px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+
+.filters li a:hover {
+	border-color: rgba(175, 47, 47, 0.1);
+}
+
+.filters li a.selected {
+	border-color: rgba(175, 47, 47, 0.2);
+}
+
+
+.clear-completed:hover {
+	text-decoration: underline;
+}
+
+.info {
+	margin: 65px auto 0;
+	color: #bfbfbf;
+	font-size: 10px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+
+.info p {
+	line-height: 1;
+}
+
+.info a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.info a:hover {
+	text-decoration: underline;
+}
+
+.btn {
+	padding: 10px;
+	
+	color: #555;
+	
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background-color: #bbb;
+}
+
+.flex {
+	display: flex;
+}
+
+.fa-plus {
+	padding: 30px;
+	opacity: 0;
+}
+
+.entry{
+	justify-content: space-between;
+}
+.entry > input {
+	width: 400px;
+}
+.list-item {
+	align-items: center;
+	flex-wrap: nowrap;
+	width: 100%;
+	justify-content: flex-start;
+	
+}
+
+.list-item:hover {
+	box-shadow: inset 0 0 3px black;
+}
+
+.list-item .fa-check-circle {
+	font-size: 1.5rem;
+	margin: 0.25rem;
+}
+
+.unstarred,
+.unchecked {
+	opacity: 25%;
+}
+
+.unstarred,
+.unchecked:hover {
+	opacity: 40%;
+}
+
+.unstarred,
+.unchecked:active {
+	color: darken(20%);
+}
+
+.checked {
+	color: green;
+	opacity: 80%;
+}
+
+.checked:active {
+	color: darken(green, 5%);
+}
+
+
+.checked~.content {
+	text-decoration: line-through;
+	opacity: 25%;
+}
+
+.starred {
+	color: gold;
+	text-shadow: 0 0 1px rgb(123, 105, 0);
+}
+
+.starred+.content {
+	font-weight: 500;
+}
+
+.starred:active {
+	color: darken(gold, 10%);
+}
+
+
+.content {
+	margin: 0.25rem;
+}
+
+.delete,
+.destroy {
+	color: red;
+	opacity: 40%;
+	justify-self: flex-end;
+}
+
+.delete,
+.destroy:active {
+	color: darken(red, 15%);
+	text-shadow: 0 0 1px rgb(86, 53, 53);
+}
+
+
+
+.delete {
+	font-size: 1.5rem;
+	margin: 0.25rem;
+	margin-left: auto;
+	visibility: hidden;
+}
+
+.destroy {
+	font-size: 1.25rem;
+	margin-right: 1rem;
+}
+
+.restore {
+	color: green;
+	opacity: 40%;
+	justify-self: flex-end;
+	font-size: 1.25rem;
+	margin-left: auto;
+	margin-right: 0.5rem;
+}
+
+.restore:active {
+	color: darken(green, 5%);
+	text-shadow: 0 0 1px green;
+}
+
+.list-item:hover {
+	cursor: default;
+}
+
+.delete,
+.restore,
+.destroy {
+	visibility: visible;
+}
+
+
+
